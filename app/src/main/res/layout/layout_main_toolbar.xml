@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/ClToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_common_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Title"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:background="@drawable/toggle_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:textOff=""
+            android:textOn=""
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnBankDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Bank Details"
+            android:textAllCaps="false"
+            android:background="@android:color/white"
+            android:textSize="14dp"
+            android:visibility="gone"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+
+        <ImageView
+            android:id="@+id/menuIv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/menu_black"
+            android:paddingTop="10dp"
+            android:visibility="visible"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="start"/>
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_button"
+            android:paddingTop="10dp"
+            android:visibility="gone"
+            android:paddingBottom="10dp"
+            android:paddingRight="25dp"
+            android:layout_gravity="start"/>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

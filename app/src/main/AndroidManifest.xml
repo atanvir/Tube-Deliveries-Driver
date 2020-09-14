@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.TubeDeliveriesDriverModule">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/round_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.TubeDeliveriesDriverModule.Activity.MainActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.TubeDeliveriesDriverModule.Activity.AddBankDetailActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.TubeDeliveriesDriverModule.Activity.DriverRegistrationActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.TubeDeliveriesDriverModule.Activity.OTPActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.TubeDeliveriesDriverModule.Activity.SignUpActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.TubeDeliveriesDriverModule.Activity.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.TubeDeliveriesDriverModule.Activity.LoginActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.TubeDeliveriesDriverModule.Activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".Firebase.MyFirebaseMessageService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.TubeDeliveriesDriverModule.Fragment.MyProfileFragment">
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ciProfilePic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ciProfilePic"
+                app:layout_constraintEnd_toEndOf="@+id/ciProfilePic"
+                app:layout_constraintStart_toStartOf="@+id/ciProfilePic"
+                app:layout_constraintTop_toTopOf="@+id/ciProfilePic" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ciProfilePic">
+
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/light_grey"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout_first_name"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout_first_name"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout_first_name" />
+
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/light_grey"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout_last_name"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout_last_name"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout_last_name" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clPhonePicker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view24">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/countryCodePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:visibility="visible"
+                        app:ccp_showFlag="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:focusedByDefault="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </com.hbb20.CountryCodePicker>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:hintTextAppearance="@style/editColor"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/countryCodePicker"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_signup_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:drawableRight="@drawable/ss_phone"
+                            android:drawablePadding="16dp"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="Phone Number"
+                            android:imeOptions="actionNext"
+                            android:inputType="text|number"
+                            android:maxLines="1"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:textSize="15dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/light_grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clPhonePicker" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout109"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:hintEnabled="true"
+                    app:hintTextAppearance="@style/editColor"
+                    app:layout_constraintEnd_toEndOf="@+id/clPhonePicker"
+                    app:layout_constraintStart_toStartOf="@+id/clPhonePicker"
+                    app:layout_constraintTop_toBottomOf="@+id/view3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:drawableRight="@drawable/down_arrow"
+                        android:focusable="false"
+                        android:hint="Select State"
+                        android:paddingTop="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Spinner
+                    android:id="@+id/spnState"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/drawable_white"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout109"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout109"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout109" />
+
+                <View
+                    android:id="@+id/view169"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/light_grey"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout109"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout109"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout109" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout144"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:hintEnabled="true"
+                    app:hintTextAppearance="@style/editColor"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout109"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout109"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout109">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:drawableRight="@drawable/down_arrow"
+                        android:focusable="false"
+                        android:hint="Select City"
+                        android:paddingTop="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Spinner
+                    android:id="@+id/spnCity"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/drawable_white"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout144"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout144"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout144" />
+
+                <View
+                    android:id="@+id/view160"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/light_grey"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout144"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout144"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout144" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_first_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="8dp"
+                    app:hintTextAppearance="@style/editColor"
+                    app:layout_constraintEnd_toStartOf="@+id/textInputLayout_last_name"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_signup_first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawableRight="@drawable/ss_user"
+                        android:drawablePadding="16dp"
+                        android:hint="First Name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="15dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout_last_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:hintTextAppearance="@style/editColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textInputLayout_first_name"
+                    app:layout_constraintTop_toTopOf="@+id/textInputLayout_first_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_signup_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawableRight="@drawable/ss_user"
+                        android:drawablePadding="16dp"
+                        android:hint="Last Name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:textColorHint="@color/colorAccent"
+
+
+                        android:textSize="15dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInput_email_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    app:hintTextAppearance="@style/editColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout_first_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_signup_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawableRight="@drawable/ss_mail"
+                        android:drawablePadding="16dp"
+                        android:hint="Email id"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="15dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:id="@+id/view24"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/light_grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInput_email_id" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Add Vehicle Image"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toStartOf="@+id/textInputVehchileNumber"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputVehchileNumber" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Add License Image"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Add Vehicle Insurance Image"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout1"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout1" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvVehichleImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="105dp"
+                    android:layout_marginTop="12dp"
+                    android:visibility="visible"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintStart_toStartOf="@+id/textView11"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clVehchileImage"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/round_corners2"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputVehchileNumber"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/rvVehichleImage"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:textColor="@color/white"
+                        android:textSize="32dp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView6"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:text="Add Image"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView12"
+                        app:layout_constraintHorizontal_bias="0.482"
+                        app:layout_constraintStart_toStartOf="@+id/textView12" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvLicence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="105dp"
+                    android:layout_marginTop="12dp"
+                    android:visibility="visible"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintStart_toStartOf="@+id/textView13"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clLicenseImage"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/round_corners2"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputVehchileNumber"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/rvLicence"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+                    <TextView
+                        android:id="@+id/textView133"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:textColor="@color/white"
+                        android:textSize="32dp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView67"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView67"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:text="Add Image"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView133"
+                        app:layout_constraintHorizontal_bias="0.482"
+                        app:layout_constraintStart_toStartOf="@+id/textView133" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvInsurance"
+                    android:layout_width="0dp"
+                    android:layout_height="105dp"
+                    android:layout_marginTop="12dp"
+                    android:visibility="visible"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintStart_toStartOf="@+id/textView15"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clVehchileInsuranceImage"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/round_corners2"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputVehchileNumber"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/rvInsurance"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+                    <TextView
+                        android:id="@+id/textView134"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:textColor="@color/white"
+                        android:textSize="32dp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView68"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView68"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:text="Add Image"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView134"
+                        app:layout_constraintHorizontal_bias="0.482"
+                        app:layout_constraintStart_toStartOf="@+id/textView134" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:hintEnabled="true"
+                    app:hintTextAppearance="@style/editColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edVehicletype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:drawableRight="@drawable/down_arrow"
+                        android:focusable="false"
+                        android:hint="Vehicle Type"
+                        android:paddingTop="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Spinner
+                    android:id="@+id/spnVehicle"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/drawable_white"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout14"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout14"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout14" />
+
+                <View
+                    android:id="@+id/view16"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/light_grey"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout14"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout14"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout14" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:hintEnabled="true"
+                    app:hintTextAppearance="@style/editColor"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout14"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout14"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout14">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edBrand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:drawableRight="@drawable/down_arrow"
+                        android:focusable="false"
+                        android:hint="Brand &amp; Model Number"
+                        android:paddingTop="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Spinner
+                    android:id="@+id/spnBrand"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/drawable_white"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout15"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout15"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout15" />
+
+                <View
+                    android:id="@+id/view17"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/light_grey"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout15"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout15"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout15" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputVehchileNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:hintTextAppearance="@style/editColor"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout15"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout15"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout15">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edVehicleNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Vehicle Number"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="15dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/light_grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputVehchileNumber" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    app:hintEnabled="true"
+                    app:hintTextAppearance="@style/editColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView11"
+                    app:layout_constraintTop_toBottomOf="@+id/clVehchileImage">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edLicenseNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawablePadding="16dp"
+                        android:hint="License Number"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="13"
+                        android:maxLines="1"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="15dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:id="@+id/view166"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/light_grey"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    app:helperTextTextAppearance="@style/editColor"
+                    app:hintEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView13"
+                    app:layout_constraintTop_toBottomOf="@+id/clLicenseImage">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edInsuranceNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawablePadding="16dp"
+                        android:hint="Vehicle Insurance Number"
+
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="13"
+                        android:maxLines="1"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+
+                        android:textSize="15dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:id="@+id/view167"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/light_grey"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout1"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textInputLayout1"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout1" />
+
+                <Button
+                    android:id="@+id/btUpdate"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:background="@drawable/login_button_selector"
+                    android:text="Update Profile"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clVehchileInsuranceImage" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
