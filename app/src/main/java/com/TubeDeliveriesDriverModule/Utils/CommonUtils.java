@@ -551,10 +551,4 @@ public class CommonUtils extends AppCompatActivity {
         return String.valueOf(sum1);
     }
 
-
-
-
-
-
-
 }

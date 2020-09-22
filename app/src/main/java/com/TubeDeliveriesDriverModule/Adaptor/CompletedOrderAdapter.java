@@ -126,6 +126,7 @@ public class CompletedOrderAdapter extends RecyclerView.Adapter<CompletedOrderAd
         @Override
         public void onClick(View view) {
             switch (view.getId()){
+
                 case R.id.mainCl:
                 if(cl_myOrders.getVisibility()== View.GONE){
                     ivDropDownOrder.setImageResource(R.drawable.drop_down_ic);
